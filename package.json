@@ -1,0 +1,22 @@
+{
+  "name": "hubot-announce",
+  "description": "Announce when hubot comes online or goes offline and include version",
+  "version": "0.1.0",
+  "author": "Alex Robson <asrobson@gmail.com>",
+  "license": "MIT",
+  "keywords": "announce",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/arobson/hubot-announce.git"
+  },
+  "bugs": {
+    "url": "https://github.com/arobson/hubot-announce/issues"
+  },
+  "dependencies": {
+    "lodash": "^3.10.1"
+  },
+  "peerDependencies": {
+    "hubot": "2.x"
+  },
+  "main": "index.coffee"
+}
