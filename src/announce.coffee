@@ -11,9 +11,9 @@ _ = require "lodash"
 path = require "path"
 fs = require "fs"
 
-packagePath = path.resolve __dirname, "../package.json"
+packagePath = path.resolve __dirname, "../../../package.json"
 packageJson = require packagePath
-infoPath = path.resolve __dirname, "../.nonstop-info.json"
+infoPath = path.resolve __dirname, "../../../.nonstop-info.json"
 version = packageJson.version
 
 if fs.existsSync infoPath
