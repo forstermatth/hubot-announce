@@ -32,7 +32,6 @@ announce = ( robot ) ->
 
   process.on "exit", goOffline
   process.on "SIGINT", goOffline
-  process.on "uncaughtException", goOffline
 
 module.exports = (robot) ->
   announce robot
