@@ -26,9 +26,13 @@ announce = ( robot ) ->
   _.each announceRooms, ( room ) ->
     robot.messageRoom room, "_#{robot.name} version_ #{version} _ is online_"
 
-  process.on "exit", () ->
+  goOffline = () ->
     _.each announceRooms, ( room ) ->
       robot.messageRoom room, "_#{robot.name} version_ #{version} _ is going offline_"
+
+  process.on "exit", goOffline
+  process.on "SIGINT", goOffline
+  process.on "uncaughtException", goOffline
 
 module.exports = (robot) ->
   announce robot
