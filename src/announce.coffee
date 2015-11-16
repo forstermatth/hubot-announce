@@ -26,9 +26,10 @@ announce = ( robot ) ->
   _.each announceRooms, ( room ) ->
     robot.messageRoom room, "_#{robot.name} version_ #{version} _ is online_"
 
-  goOffline = () ->
+  goOffline = ( code ) ->
     _.each announceRooms, ( room ) ->
       robot.messageRoom room, "_#{robot.name} version_ #{version} _ is going offline_"
+    process.exit( code || 0 );
 
   process.on "exit", goOffline
   process.on "SIGINT", goOffline
